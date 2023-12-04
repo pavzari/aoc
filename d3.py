@@ -37,6 +37,14 @@ def sum_engine_part_numbers(input):
     return sum
 
 
+def sum_engine_gear_ratios():
+    """Istead of searching for all symbols around a number, look for a star and note it's position:
+    create a dict with a list of numbers and coordinates of stars that the number is adjacent to
+    then check which two numbers share the same star.
+    """
+    pass
+
+
 if __name__ == "__main__":
     input = [line.strip() for line in open("input/d3", "r").readlines()]
     print(sum_engine_part_numbers(input))
