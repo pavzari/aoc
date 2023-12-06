@@ -28,7 +28,7 @@ def lookup(value, input):
         dest_start = int(rang[0])
         range_lenght = int(rang[2])
 
-        if value >= source_start and value <= (source_start + range_lenght):
+        if value >= source_start and value < (source_start + range_lenght):
             result = dest_start + (value - source_start)
 
     return result
