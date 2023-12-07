@@ -5,5 +5,5 @@ sample_input = [
 ]
 
 
-def test_d4_a():
+def test_d5_a():
     assert get_lowest_location(sample_input) == 35

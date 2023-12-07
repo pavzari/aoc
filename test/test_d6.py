@@ -6,5 +6,5 @@ distances = map(int, input[1].split(": ")[1].split())
 races = tuple(zip(times, distances))
 
 
-def test_d4_a():
+def test_d6_a():
     assert day_six(races) == 288
