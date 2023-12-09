@@ -36,13 +36,13 @@ def extrapolate_backwards(input):
             seq = [seq[i + 1] - seq[i] for i in range(len(seq) - 1)]
             first.append(seq[0])
 
-        new_last = []
-        new_last.append(first[-1])
+        new_first = []
+        new_first.append(first[-1])
 
         for i in range(len(first) - 2, -1, -1):
-            new_last.append(first[i] - new_last[-1])
+            new_first.append(first[i] - new_first[-1])
 
-        result.append(new_last[-1])
+        result.append(new_first[-1])
 
     return sum(result)
 
