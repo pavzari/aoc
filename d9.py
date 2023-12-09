@@ -27,6 +27,27 @@ def sum_oasis_values(input):
     return sum(result)
 
 
+def extrapolate_backwards(input):
+    result = []
+    for line in input:
+        seq = list(map(int, line.split(" ")))
+        first = [seq[0]]
+        while len(set(seq)) > 1:
+            seq = [seq[i + 1] - seq[i] for i in range(len(seq) - 1)]
+            first.append(seq[0])
+
+        new_last = []
+        new_last.append(first[-1])
+
+        for i in range(len(first) - 2, -1, -1):
+            new_last.append(first[i] - new_last[-1])
+
+        result.append(new_last[-1])
+
+    return sum(result)
+
+
 if __name__ == "__main__":
     input = [line.strip() for line in open("input/d9", "r").readlines()]
     print(sum_oasis_values(input))
+    print(extrapolate_backwards(input))
