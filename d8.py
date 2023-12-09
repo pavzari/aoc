@@ -17,7 +17,6 @@ def find_steps(nodes, instructions):
 
 
 def part_two(nodes, instructions):
-    # 13524038372771
     starting_nodes = [node for node in nodes.keys() if node[2] == "A"]
 
     # next_nodes = starting_nodes
