@@ -1,9 +1,7 @@
 from itertools import pairwise
 
 
-def _is_report_safe(
-    report: list,
-) -> bool | tuple[bool, int, int]:
+def _is_report_safe(report: list) -> bool:
     if 0 in report:
         return False
     elif max(report) > 3 or min(report) < -3:
